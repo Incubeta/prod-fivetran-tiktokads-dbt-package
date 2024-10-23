@@ -54,6 +54,16 @@ The following vars can be used to change the output table names:
 |tiktok_ad_performance_v1_alias| tiktok-ad_performance-v1 |
 
 
+#### Add custom fields:
+Ensure that the variable `tiktok_custom_fields` is defined in the root project's `dbt_project.yml` file (this is your main repository).
+```yaml
+# dbt_project.yml (root project)
+vars:
+  tiktok_custom_fields: "value_per_complete_payment,complete_payment,user_registration,page_event_search,total_pageview"
+
+```
+
+
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
