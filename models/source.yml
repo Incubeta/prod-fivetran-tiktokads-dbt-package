@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: tiktok
+    schema: "{{ var('tiktok_schema', target.dataset) }}"
+    tables:
+      - name: ad_history
+        identifier: "{{ var('ad_history_identifier', 'ad_history') }}"
+      - name: advertiser
+        identifier: "{{ var('advertiser_identifier', 'advertiser') }}"
+      - name: tiktok_ad_performance_v_1
+        identifier: "{{ var('tiktok_ad_performance_v_1_identifier', 'tiktok_ad_performance_v_1') }}"
