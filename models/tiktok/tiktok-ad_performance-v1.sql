@@ -31,7 +31,7 @@ SELECT
   SAFE_CAST( advertiser_name AS STRING ) advertiser_name,
   SAFE_CAST( campaign_id AS STRING ) campaign_id,
   SAFE_CAST( campaign_name AS STRING ) campaign_name,
-  SAFE_CAST( stat_time_day AS DATETIME ) stat_time_day,
+  SAFE_CAST( stat_time_day AS STRING ) stat_time_day,
   SAFE_CAST( button_click AS STRING ) button_click,
   SAFE_CAST( clicks AS STRING ) clicks,
   SAFE_CAST( conversion AS STRING ) conversion,
