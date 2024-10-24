@@ -1,4 +1,4 @@
-{% macro add_custom_fields() %}
+{% macro null_non_existing_fields() %}
   {%- if var('tiktok_non_existing_fields', None) is not none -%}
     {%- set custom_fields = var('tiktok_non_existing_fields').split(',') -%}
     {%- for field in custom_fields -%}
