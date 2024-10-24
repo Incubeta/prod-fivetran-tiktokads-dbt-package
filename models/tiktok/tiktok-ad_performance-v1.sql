@@ -50,7 +50,8 @@ SELECT
   SAFE_CAST( video_views_p_75 AS STRING ) video_views_p75,
   SAFE_CAST( video_watched_2_s AS STRING ) video_watched_2s,
   SAFE_CAST( video_watched_6_s AS STRING ) video_watched_6s,
-  {{ add_custom_fields() }}
+  {{ add_custom_fields() }},
+  {{ null_non_existing_fields }}
 FROM
   {{ source('tiktok', 'tiktok_ad_performance_v_1') }}
 LEFT JOIN (
