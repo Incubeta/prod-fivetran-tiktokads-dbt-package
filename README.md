@@ -56,7 +56,7 @@ vars:
 ```
 
 #### Add non-existing fields:
-Ensure that the variable `tiktok_custom_fields` is defined in the root project's `dbt_project.yml` file (this is your main repository).
+Ensure that the variable `tiktok_non_existing_fields` is defined in the root project's `dbt_project.yml` file (this is your main repository).
 This will add `NULL` value to the field.
 ```yaml
 # dbt_project.yml (root project)
