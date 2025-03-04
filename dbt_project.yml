@@ -36,3 +36,4 @@ vars:
   campaign_segment_separator: _
   client_account_structure: None
   custom_fields: None
+  account_currency: GBP

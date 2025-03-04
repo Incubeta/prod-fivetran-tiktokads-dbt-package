@@ -3,7 +3,10 @@ with advertiser_info as (
 ),
 report as (
   select *
-    from {{ref('stg_ad_performance-v1')}}
+    from {{ref('int_ad_performance-v1')}}
+    {% if is_incremental() %}
+    WHERE day >= {{dbt_date.n_days_ago(var('days_ago', 1), date="day")}}
+    {%endif%}
   )
 SELECT 
         {{dbt_utils.generate_surrogate_key(["day", "report.ad_id", "advertiser_id", "campaign_id"])}} as unique_id,
@@ -11,8 +14,6 @@ SELECT
   advertiser_info.advertiser_id,
   advertiser_info.advertiser_name
 
--- exchange rates should be used in client project  (SAFE_CAST(spend AS FLOAT64) / source_b.ex_rate) _gbp_cost,
--- (SAFE_CAST(total_purchase_value AS FLOAT64) / source_b.ex_rate) _gbp_revenue,
 
 
 FROM
