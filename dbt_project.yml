@@ -33,3 +33,6 @@ vars:
   tiktok_ad_performance_v_1_identifier: tiktok_ad_performance_v_1
   ad_history_identifier: ad_history
   advertiser_identifier: advertiser
+  campaign_segment_separator: _
+  client_account_structure: None
+  custom_fields: None
