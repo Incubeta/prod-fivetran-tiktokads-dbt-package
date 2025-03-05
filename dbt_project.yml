@@ -3,7 +3,7 @@
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
 name: 'tiktok_connectors'
-version: '1.0.0'
+version: '1.1.0'
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'tiktok_connectors'
@@ -33,3 +33,7 @@ vars:
   tiktok_ad_performance_v_1_identifier: tiktok_ad_performance_v_1
   ad_history_identifier: ad_history
   advertiser_identifier: advertiser
+  campaign_segment_separator: _
+  client_account_structure: None
+  custom_fields: None
+  account_currency: GBP
