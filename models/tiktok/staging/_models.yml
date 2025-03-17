@@ -1,0 +1,4 @@
+models:
+  - name: stg_ad_performance-v1
+    config:
+      event_time: day
