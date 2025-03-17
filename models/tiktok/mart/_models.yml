@@ -6,7 +6,11 @@ models:
       schema: PUB_base
       alias: tiktok-ad_performance_v1
       materialized: incremental
-      incremental_strategy: insert_overwrite
+      incremental_strategy: microbatch
+      full_refresh: false
+      event_time: day
+      batch_size: day
+      begin: 2025-01-01
       partition_by:
         field: day
         data_type: date
