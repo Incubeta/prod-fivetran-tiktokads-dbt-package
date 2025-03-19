@@ -6,7 +6,7 @@
 ## How do I use the dbt package?
 ### Step 1: Prerequisites
 To use this dby package, you must have the following:
-- At least one Fivetran Microsoft connector syncing data for at least one of the predefined reports:
+- At least one Fivetran TikTok connector syncing data for at least one of the predefined reports:
     - tiktok_ad_performance_v_1
 - A BigQuery data destination.
 
@@ -19,7 +19,7 @@ packages:
 ```
 
 ### Step 3: Define input tables variables
-This package reads the microsoft/bings data from the different tables created by the microsoft ads connector. 
+This package reads the TikTok data from the different tables created by the TikTok ads connector. 
 The names of the tables can be changed by setting the correct name in the root `dbt_project.yml` file.
 
 The following table shows the configuration keys and the default table names:
