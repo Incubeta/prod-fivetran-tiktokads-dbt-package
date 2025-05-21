@@ -7,6 +7,7 @@ models:
       alias: tiktok-ad_performance_v1
       materialized: incremental
       incremental_strategy: microbatch
+      omit_default_schema: true
       full_refresh: false
       event_time: day
       batch_size: day
@@ -15,4 +16,5 @@ models:
         field: day
         data_type: date
         granularity: day
+      omit_default_schema: true
 
