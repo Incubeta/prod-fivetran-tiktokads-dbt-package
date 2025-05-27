@@ -3,6 +3,7 @@
     alias=var('tiktok_ad_performance_v1_alias','tiktok-ad_performance-v1'),
     field="date")
 }}
+{{config(event_time="date")}}
 
 WITH
   advertiser_info AS (
