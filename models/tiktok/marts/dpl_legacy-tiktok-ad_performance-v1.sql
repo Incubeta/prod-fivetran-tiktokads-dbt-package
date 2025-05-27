@@ -43,5 +43,5 @@ SAFE_CAST(	video_watched_6s	AS	INT64	)	video_watched_6s	,
 
 FROM {{ref('tiktok-ad_performance-v1')}} report
 left join exchange_rates
-on report.day = exchange_rates.day
+on report.date = exchange_rates.day
 and lower(ifnull(trim(report.advertiser_currency), '{{var('account_currency')}}')) = exchange_rates.currency_code
