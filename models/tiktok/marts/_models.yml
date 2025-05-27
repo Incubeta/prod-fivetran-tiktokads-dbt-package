@@ -1,10 +1,10 @@
 version: 2
 
 models:
-  - name: pub_base-tiktok-ad_performance-v1
+  - name: pub_base-tiktok-ad_performance-v2
     config:
       schema: PUB_base
-      alias: tiktok-ad_performance-v1
+      alias: tiktok-ad_performance-v2
       materialized: incremental
       incremental_strategy: microbatch
       omit_default_schema: true
